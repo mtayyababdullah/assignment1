@@ -1,9 +1,10 @@
 "use strict";
-//Task 2:
 Object.defineProperty(exports, "__esModule", { value: true });
+var prompt = require("prompt-sync")();
+//Task 2:
 let addition = (c, d) => c + d;
 console.log(addition(50, 25));
-let num = 11;
+let num = prompt("Please enter a number ");
 if (num % 2 == 0) {
     console.log("It is Even");
 }
