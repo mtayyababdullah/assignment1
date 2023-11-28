@@ -27,6 +27,24 @@ function rectangleArea(width: number, height: number) {
     console.log(rectangleArea(5, 7))
 
 
+    //Scenario 4: String Reversal
+
+    function reverse(str: string) {
+
+      // split the name into an array
+      // reverse the array
+      // join the name back
+
+      return str.split('').reverse().join('');
+
+    }
+
+    let original = "Tayyab"
+    let reversestring = reverse(original)
+
+    console.log(reversestring)
+
+
    // Scenario 5: Temperature Conversion:
 function convertCelsiusToFahrenheit(celsius: number): number {
     return (celsius * 9 / 5) + 32;
