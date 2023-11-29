@@ -46,10 +46,14 @@ function rectangleArea(width: number, height: number) {
 
 
    // Scenario 5: Temperature Conversion:
+
+   let tempC = prompt("Please enter celsius Temperature ");
+
+
 function convertCelsiusToFahrenheit(celsius: number): number {
     return (celsius * 9 / 5) + 32;
 }
 
-let tempC: number = 20;
+//let tempC: number = 20;
 let tempF: number = convertCelsiusToFahrenheit(tempC);
 console.log(`${tempC}°C is equal to ${tempF}°F.`);
