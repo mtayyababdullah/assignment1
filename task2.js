@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var prompt = require("prompt-sync")();
 //Task 2:
-console.log('Scenario 1: Sum numbers');
+//Scenario 1: Sum numbers
 let addition = (c, d) => c + d;
 console.log(addition(50, 25));
 //Scenario 2: Check Even or Odd

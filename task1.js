@@ -13,10 +13,13 @@ let veg3 = "cabbage";
 let groc1 = "soap";
 let groc2 = "shampoo";
 let groc3 = "lotion";
-let selection = prompt("please select an option 1-fruits, 2-vegetabels, 3-grocery");
+console.log("Please select an option \n 1-fruits\n 2-vegetables\n 3-grocery");
+const selection = prompt("");
+console.log("selection is: " + selection);
 if (selection == "1") {
     console.log(`You have selected ${opt1}`);
-    let fruit = prompt("Please select a fruit 1-apple: 10/kg, 2-orange: 20/doz, 3-orange: 50/doz");
+    console.log("Please select a fruit\n 1-apple: 10/kg\n 2-orange: 20/doz\n 3-orange: 50/doz");
+    let fruit = prompt("");
     if (fruit == "1") {
         console.log(`You have selected ${frut1}`);
         let fruts = prompt("Please enter how much you want to buy:");
@@ -71,7 +74,8 @@ if (selection == "1") {
 }
 else if (selection == '2') {
     console.log(`You have selected ${opt2}`);
-    let vegetabel = prompt("Please select a vegetables 1-potato: 10/kg, 2-carrot: 20/kg, 3-cabbage: 50/kg");
+    console.log("Please select a vegetables\n 1-potato: 10/kg\n 2-carrot: 20/kg\n 3-cabbage: 50/kg");
+    let vegetabel = prompt("");
     if (vegetabel == "1") {
         console.log(`You have selected ${veg1}`);
         let vegt = prompt("Please enter how much you want to buy:");
@@ -126,7 +130,8 @@ else if (selection == '2') {
 }
 else if (selection == '3') {
     console.log(`You have selected ${opt3}`);
-    let grocery = prompt("Please select a grocery 1-soap: 10/pcs, 2-shampoo: 20/pcs, 3-lotion: 50/pcs");
+    console.log("Please select a grocery\n 1-soap: 10/pcs\n 2-shampoo: 20/pcs\n 3-lotion: 50/pcs");
+    let grocery = prompt("");
     if (grocery == "1") {
         console.log(`You have selected ${groc1}`);
         let grocy = prompt("Please enter how much you want to buy:");
@@ -182,14 +187,49 @@ else if (selection == '3') {
 else {
     console.log('You have not selected an option');
 }
-let paymentOptions = prompt("Please select a grocery 1-Bank Transfer, 2-Credit Card");
-for (let i = 1; i = 2; i++) {
-    let bank = prompt("Please enter your bank number: ");
-    console.log("Payment Received");
-    break;
-    for (let j = 1; j = 2; j++) {
-        let Card = prompt("Please enter your Card number: ");
-        console.log("Payment Received");
-        break;
+if (selection >= 1 && selection <= 3) {
+    let paymnetMethodCount = 2;
+    console.log("Please select a payment option \n 1-Bank Transfer\n 2-Credit Card");
+    let paymentOptions = prompt("");
+    if (paymentOptions < 1 || paymentOptions > 2) {
+        console.log("you have not selected any Payment option");
+        console.log("Please select a payment option \n 1-Bank Transfer\n 2-Credit Card");
+        paymentOptions = prompt("");
+        for (let i = 1; i <= paymnetMethodCount; i++) {
+            for (let j = 1; j <= paymentOptions; j++) {
+                if (j === 1) {
+                    let bank = prompt("Please enter your bank number: ");
+                    console.log("Payment Received");
+                    break;
+                }
+                else {
+                    let Card = prompt("Please enter your Card number: ");
+                    console.log("Payment Received");
+                    break;
+                }
+            }
+            if (paymentOptions) {
+                break;
+            }
+        }
+    }
+    else {
+        for (let i = 1; i <= paymnetMethodCount; i++) {
+            for (let j = 1; j <= paymentOptions; j++) {
+                if (paymentOptions == 1) {
+                    let bank = prompt("Please enter your bank number: ");
+                    console.log("Payment Received");
+                    break;
+                }
+                else {
+                    let Card = prompt("Please enter your Card number: ");
+                    console.log("Payment Received");
+                    break;
+                }
+            }
+            if (paymentOptions) {
+                break;
+            }
+        }
     }
 }
